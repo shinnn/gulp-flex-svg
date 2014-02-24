@@ -1,0 +1,33 @@
+{
+  "name": "gulp-flex-svg",
+  "version": "0.0.0",
+  "description": "flex-svg plugin for gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/.bin/mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shinnn/gulp-flex-svg.git"
+  },
+  "author": {
+    "name": "Shinnosuke Watanabe",
+    "url": "https://github.com/shinnn"
+  },
+  "readmeFilename": "README.md",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shinnn/gulp-flex-svg/issues"
+  },
+  "homepage": "https://github.com/shinnn/gulp-flex-svg",
+  "dependencies": {
+    "through2": "~0.4.1",
+    "flex-svg": "~0.0.3",
+    "gulp-util": "~2.2.14"
+  },
+  "devDependencies": {
+    "vinyl": "~0.2.3",
+    "event-stream": "~3.1.0",
+    "mocha": "~1.17.1"
+  }
+}
