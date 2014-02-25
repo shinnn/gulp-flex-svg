@@ -1,6 +1,6 @@
 {
   "name": "gulp-flex-svg",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "flex-svg plugin for gulp",
   "main": "index.js",
   "scripts": {
@@ -20,6 +20,13 @@
     "url": "https://github.com/shinnn/gulp-flex-svg/issues"
   },
   "homepage": "https://github.com/shinnn/gulp-flex-svg",
+  "keywords": [
+    "gulpplugin",
+    "svg",
+    "responsive",
+    "width",
+    "height"
+  ],
   "dependencies": {
     "through2": "~0.4.1",
     "flex-svg": "~0.0.3",
