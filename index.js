@@ -5,7 +5,7 @@ var PluginError = require('gulp-util').PluginError;
 var flexSvg = require('flex-svg');
 
 // Consts
-const PLUGIN_NAME = 'gulp-flex-svg';
+var PLUGIN_NAME = 'gulp-flex-svg';
 
 // Plugin level function (dealing with files)
 module.exports = function gulpFlexSvg() {
