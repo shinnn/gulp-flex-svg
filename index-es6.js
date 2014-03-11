@@ -10,7 +10,7 @@ const PLUGIN_NAME = 'gulp-flex-svg';
 module.exports = () => {
   
   // Creating a stream through which each file will pass
-  var stream = through.obj(function(file, enc, callback) {
+  let stream = through.obj(function(file, enc, callback) {
     if (file.isNull()) {
       this.push(file); // Do nothing if no contents
       return callback();
