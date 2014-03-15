@@ -39,7 +39,7 @@
   "devDependencies": {
     "vinyl": "~0.2.3",
     "event-stream": "~3.1.0",
-    "mocha": "~1.17.1",
-    "traceur": "0.0.28"
+    "mocha": "^1.18.0",
+    "traceur": "0.0.29"
   }
 }
