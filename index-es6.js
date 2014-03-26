@@ -10,23 +10,22 @@ const PLUGIN_NAME = 'gulp-flex-svg';
 module.exports = () => {
   
   // Creating a stream through which each file will pass
-  let stream = through.obj(function(file, enc, callback) {
+  let stream = through.obj(function(file, enc, cb) {
     if (file.isNull()) {
       this.push(file); // Do nothing if no contents
-      return callback();
+      return cb();
     }
 
     if (file.isBuffer()) {
       flexSvg(file.contents, (err, result) => {
         file.contents = new Buffer(result);
         this.push(file);
-        return callback();
+        return cb();
       });
     }
 
     if (file.isStream()) {
-      this.emit('error', new PluginError(PLUGIN_NAME, 'Streams are not supported!'));
-      return callback();
+      return cb(new PluginError(PLUGIN_NAME, 'Streaming not supported'));
     }
   });
 
