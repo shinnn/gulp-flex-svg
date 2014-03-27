@@ -18,7 +18,7 @@ module.exports = (function() {
       }));
     }
     if (file.isStream()) {
-      return cb(new PluginError(PLUGIN_NAME, 'Streams are not supported!'));
+      return cb(new PluginError(PLUGIN_NAME, 'Streaming not supported'));
     }
   });
   return stream;
