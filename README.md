@@ -1,9 +1,9 @@
 # gulp-flex-svg
 
-[![NPM version](https://badge.fury.io/js/gulp-flex-svg.png)](http://badge.fury.io/js/gulp-flex-svg)
-[![Build Status](https://travis-ci.org/shinnn/gulp-flex-svg.png?branch=master)](https://travis-ci.org/shinnn/gulp-flex-svg)
-[![Dependency Status](https://david-dm.org/shinnn/gulp-flex-svg.png)](https://david-dm.org/shinnn/gulp-flex-svg)
-[![devDependency Status](https://david-dm.org/shinnn/gulp-flex-svg/dev-status.png)](https://david-dm.org/shinnn/gulp-flex-svg#info=devDependencies)
+[![NPM version](https://badge.fury.io/js/gulp-flex-svg.svg)](http://badge.fury.io/js/gulp-flex-svg)
+[![Build Status](https://travis-ci.org/shinnn/gulp-flex-svg.svg?branch=master)](https://travis-ci.org/shinnn/gulp-flex-svg)
+[![Dependency Status](https://david-dm.org/shinnn/gulp-flex-svg.svg?theme=shields.io)](https://david-dm.org/shinnn/gulp-flex-svg)
+[![devDependency Status](https://david-dm.org/shinnn/gulp-flex-svg/dev-status.svg?theme=shields.io)](https://david-dm.org/shinnn/gulp-flex-svg#info=devDependencies)
 
 [flex-svg](https://github.com/shinnn/node-flex-svg) plugin for [gulp](https://github.com/gulpjs/gulp)
 
