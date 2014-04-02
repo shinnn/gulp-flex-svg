@@ -1,7 +1,7 @@
 'use strict';
 
 var through = require('through2');
-var PluginError = require('gulp-util').PluginError;
+var {PluginError} = require('gulp-util');
 var flexSvg = require('flex-svg');
 
 const PLUGIN_NAME = 'gulp-flex-svg';
