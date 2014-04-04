@@ -4,10 +4,11 @@
   "description": "flex-svg plugin for gulp",
   "main": "./index-es5.js",
   "scripts": {
+    "lint": "jshint index.js test.js --reporter node_modules/jshint-stylish/stylish",
     "build-main": "traceur --experimental --out test-es5.js --script test.js",
     "build-test": "traceur --experimental --out index-es5.js --script index.js",
     "build": "npm run-script build-main && npm run-script build-test",
-    "pretest": "npm run-script build",
+    "pretest": "npm run-script lint && npm run-script build",
     "test": "mocha test-es5.js --reporter spec",
     "prepublish": "npm test"
   },
@@ -42,6 +43,8 @@
     "event-stream": "^3.1.1",
     "mocha": "^1.18.2",
     "traceur": "0.0.32",
-    "vinyl": "~0.2.3"
+    "vinyl": "~0.2.3",
+    "jshint-stylish": "^0.1.5",
+    "jshint": "^2.5.0"
   }
 }
