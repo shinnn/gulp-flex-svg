@@ -1,11 +1,8 @@
 {
   "camelcase": true,
-  "trailing": true,
   "indent": 2,
+  "browser": false,
   "node": true,
-  "esnext": true,
-  "globals": {
-    "describe": false,
-    "it": false
-  }
+  "mocha": true,
+  "esnext": true
 }
