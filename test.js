@@ -1,9 +1,10 @@
+var path = require('path');
 var assert = require('assert');
 var es = require('event-stream');
 var File = require('vinyl');
 
-let {main} = require('./package.json');
-var gulpFlexSvg = require(main);
+let wd = process.cwd() + '/';
+var gulpFlexSvg = require(wd + require(wd + 'package.json').main);
 
 var fixture = `\
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
