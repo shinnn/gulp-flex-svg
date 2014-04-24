@@ -3,8 +3,9 @@ var assert = require('assert');
 var es = require('event-stream');
 var File = require('vinyl');
 
-let wd = process.cwd() + '/';
-var gulpFlexSvg = require(wd + require(wd + 'package.json').main);
+/* jshint ignore:start */
+var gulpFlexSvg = require(path.resolve(process.env.npm_package_main));
+/* jshint ignore:end */
 
 var fixture = `\
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
