@@ -4,11 +4,12 @@
   "description": "flex-svg plugin for gulp",
   "main": "build/index-es5.js",
   "scripts": {
-    "lint": "jshint index.js test.js --reporter node_modules/jshint-stylish/stylish",
-    "build-main": "traceur --experimental --out build/test-es5.js --script test.js",
-    "build-test": "traceur --experimental --out build/index-es5.js --script index.js",
-    "pretest": "rimraf build & npm run lint & npm run build-main && npm run build-test",
-    "test": "mocha build/test-es5.js --reporter spec",
+    "lint": "jshint *.js --reporter node_modules/jshint-stylish/stylish",
+    "transpile": "rimraf build && traceur --experimental --out build --script *.js",
+    "rename": "renamer --find '.' --replace '-es5.' build/*.js",
+    "build": "npm run-script transpile && npm run-script rename",
+    "pretest": "npm run-script lint & npm run-script build",
+    "test": "mocha build/test-es5.js --reporter spec --timeout 100",
     "prepublish": "npm test"
   },
   "repository": {
@@ -39,10 +40,11 @@
     "through2": "^1.0.0"
   },
   "devDependencies": {
-    "event-stream": "^3.1.1",
+    "event-stream": "^3.1.5",
     "jshint": "^2.5.0",
-    "jshint-stylish": "^0.1.5",
+    "jshint-stylish": "^0.2.0",
     "mocha": "^1.18.2",
+    "renamer": "^0.4.2",
     "rimraf": "^2.2.6",
     "traceur": "0.0.32",
     "vinyl": "~0.2.3"
