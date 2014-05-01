@@ -1,16 +1,14 @@
 'use strict';
 
 var through = require('through2');
-var {PluginError} = require('gulp-util');
+var { PluginError } = require('gulp-util');
 var flexSvg = require('flex-svg');
 
 const PLUGIN_NAME = 'gulp-flex-svg';
 
-// Plugin level function (dealing with files)
 module.exports = () => {
-  
-  // Creating a stream through which each file will pass
-  let stream = through.obj(function(file, enc, cb) {
+  // Create and return a stream through which each file will pass
+  return through.obj(function(file, enc, cb) {
     if (file.isNull()) {
       this.push(file); // Do nothing if no contents
       return cb();
@@ -28,7 +26,4 @@ module.exports = () => {
       return cb(new PluginError(PLUGIN_NAME, 'Streaming not supported'));
     }
   });
-
-  // returning the file stream
-  return stream;
 };
