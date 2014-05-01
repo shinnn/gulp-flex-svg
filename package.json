@@ -1,6 +1,6 @@
 {
   "name": "gulp-flex-svg",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "flex-svg plugin for gulp",
   "main": "build/index-es5.js",
   "scripts": {
