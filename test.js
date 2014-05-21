@@ -1,11 +1,11 @@
+'use strict';
+
 var path = require('path');
 var assert = require('assert');
 var es = require('event-stream');
 var File = require('vinyl');
 
-/* jshint ignore:start */
-var gulpFlexSvg = require(path.resolve(process.env.npm_package_main));
-/* jshint ignore:end */
+var gulpFlexSvg = require(__dirname + '/index-es5.js');
 
 var fixture = `\
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -22,7 +22,7 @@ var expected =`\
 describe('gulp-flex-svg', () => {
   describe('in buffer mode', () => {
 
-    it('should remove width and height attributes', (done) => {
+    it('should remove width and height attributes', done => {
 
       // create the fake file
       let fakeFile = new File({
