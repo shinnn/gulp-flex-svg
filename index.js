@@ -1,16 +1,14 @@
 'use strict';
 
 var through = require('through2');
-var { PluginError } = require('gulp-util');
+var {PluginError} = require('gulp-util');
 var flexSvg = require('flex-svg');
-
-const PLUGIN_NAME = 'gulp-flex-svg';
 
 module.exports = () => {
   // Create and return a stream through which each file will pass
   return through.obj(function(file, enc, cb) {
     if (file.isNull()) {
-      this.push(file); // Do nothing if no contents
+      this.push(file);
       return cb();
     }
 
@@ -23,7 +21,7 @@ module.exports = () => {
     }
 
     if (file.isStream()) {
-      return cb(new PluginError(PLUGIN_NAME, 'Streaming not supported'));
+      return cb(new PluginError('gulp-flex-svg', 'Streaming not supported'));
     }
   });
 };
