@@ -2,10 +2,10 @@
 
 var path = require('path');
 var assert = require('assert');
-var es = require('event-stream');
+
 var File = require('vinyl');
 
-var gulpFlexSvg = require(__dirname + '/index-es5.js');
+var gulpFlexSvg = require('require-main')();
 
 var fixture = `\
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
