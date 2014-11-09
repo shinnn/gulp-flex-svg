@@ -1,4 +1,0 @@
-.travis.yml
-.jshintrc
-test.js
-build/test-es5.js

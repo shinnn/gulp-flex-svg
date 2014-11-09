@@ -2,13 +2,11 @@
   "name": "gulp-flex-svg",
   "version": "0.1.4",
   "description": "flex-svg plugin for gulp",
-  "main": "build/index-es5.js",
   "scripts": {
-    "lint": "jshint *.js --reporter node_modules/jshint-stylish/stylish",
-    "build-main": "traceur --experimental --out build/index-es5.js --script index.js",
-    "build-test": "traceur --experimental --out build/test-es5.js --script test.js",
-    "pretest": "npm run lint & rimraf build && npm run build-main && npm run build-test",
-    "test": "mocha build/test-es5.js --reporter spec --timeout 100"
+    "pretest": "jscs *.js && eslint *.js",
+    "test": "_mocha test.js",
+    "coverage": "istanbul cover _mocha -- test.js",
+    "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
   },
   "repository": {
     "type": "git",
@@ -18,7 +16,10 @@
     "name": "Shinnosuke Watanabe",
     "url": "https://github.com/shinnn"
   },
-  "readmeFilename": "README.md",
+  "files": [
+    "index.js",
+    "LICENSE"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/shinnn/gulp-flex-svg/issues"
@@ -33,17 +34,22 @@
     "height"
   ],
   "dependencies": {
-    "flex-svg": "^0.2.0",
-    "gulp-util": "^2.2.17",
-    "through2": "^1.0.0"
+    "flex-svg": "^1.0.0",
+    "gulp-util": "^3.0.1",
+    "through2": "^0.6.3"
   },
   "devDependencies": {
-    "jshint": "^2.5.1",
-    "jshint-stylish": "^0.2.0",
-    "mocha": "^1.20.1",
-    "require-main": "^0.1.0",
+    "eslint": "^0.9.2",
+    "istanbul": "^0.3.2",
+    "istanbul-coveralls": "^1.0.1",
+    "jscs": "^1.7.3",
+    "mocha": "^2.0.1",
     "rimraf": "^2.2.8",
-    "traceur": "0.0.32",
-    "vinyl": "~0.2.3"
+    "simple-bufferstream": "0.0.4",
+    "vinyl": "^0.4.3"
+  },
+  "jscsConfig": {
+    "preset": "google",
+    "maximumLineLength": 98
   }
 }
