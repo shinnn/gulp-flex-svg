@@ -10,11 +10,11 @@ environment:
 
 install:
   - ps: Install-Product node $env:nodejs_version
-  - npm install -g npm
+  - npm install -g npm mocha
   - npm install
 
 build: off
 
 test_script:
-  - ps: 'node node_modules\.bin\_mocha test.js #PowerShell'
-  - cmd: node node_modules\.bin\_mocha test.js
+  - ps: '_mocha test.js #PowerShell'
+  - cmd: _mocha test.js
