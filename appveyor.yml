@@ -16,5 +16,5 @@ install:
 build: off
 
 test_script:
-  - ps: 'npm test #PowerShell'
-  - cmd: npm test
+  - ps: 'node node_modules\.bin\_mocha test.js #PowerShell'
+  - cmd: node node_modules\.bin\_mocha test.js
