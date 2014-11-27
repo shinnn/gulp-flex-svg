@@ -34,7 +34,7 @@
     "height"
   ],
   "dependencies": {
-    "flex-svg": "^1.0.0",
+    "flex-svg": "^1.0.1",
     "gulp-util": "^3.0.1",
     "through2": "^0.6.3"
   },
@@ -42,11 +42,11 @@
     "eslint": "^0.9.2",
     "istanbul": "^0.3.2",
     "istanbul-coveralls": "^1.0.1",
-    "jscs": "^1.7.3",
+    "jscs": "^1.8.0",
     "mocha": "^2.0.1",
     "rimraf": "^2.2.8",
     "simple-bufferstream": "0.0.4",
-    "vinyl": "^0.4.3"
+    "vinyl": "^0.4.5"
   },
   "jscsConfig": {
     "preset": "google",
