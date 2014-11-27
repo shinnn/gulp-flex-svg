@@ -38,7 +38,7 @@ npm install --save-dev gulp-flex-svg
 var flexSvg = require('gulp-flex-svg');
 ```
 
-### flexSvg
+### flexSvg()
 
 Return: `Object` ([stream.Transform](http://nodejs.org/docs/latest/api/stream.html#stream_class_stream_transform))
 
