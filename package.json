@@ -8,10 +8,7 @@
     "coverage": "istanbul cover _mocha -- test.js",
     "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shinnn/gulp-flex-svg.git"
-  },
+  "repository": "shinnn/gulp-flex-svg",
   "author": {
     "name": "Shinnosuke Watanabe",
     "url": "https://github.com/shinnn"
@@ -20,11 +17,12 @@
     "index.js",
     "LICENSE"
   ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/shinnn/gulp-flex-svg/issues"
-  },
-  "homepage": "https://github.com/shinnn/gulp-flex-svg",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/shinnn/gulp-flex-svg/blob/master/LICENSE"
+    }
+  ],
   "keywords": [
     "gulpplugin",
     "svg",
@@ -39,17 +37,18 @@
     "through2": "^0.6.3"
   },
   "devDependencies": {
-    "eslint": "^0.9.2",
-    "istanbul": "^0.3.2",
+    "eslint": "^0.10.2",
+    "istanbul": "^0.3.5",
     "istanbul-coveralls": "^1.0.1",
-    "jscs": "^1.8.0",
+    "jscs": "^1.8.1",
     "mocha": "^2.0.1",
     "rimraf": "^2.2.8",
     "simple-bufferstream": "0.0.4",
-    "vinyl": "^0.4.5"
+    "vinyl": "^0.4.6"
   },
   "jscsConfig": {
     "preset": "google",
-    "maximumLineLength": 98
+    "maximumLineLength": 98,
+    "validateLineBreaks": "LF"
   }
 }
