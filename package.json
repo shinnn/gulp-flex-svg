@@ -5,6 +5,7 @@
   "scripts": {
     "pretest": "jscs *.js && eslint *.js",
     "test": "_mocha test.js",
+    "test-dot": "_mocha test.js --reporter dot",
     "coverage": "istanbul cover _mocha -- test.js",
     "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
   },
@@ -43,7 +44,6 @@
     "istanbul-coveralls": "^1.0.1",
     "jscs": "^1.9.0",
     "mocha": "^2.1.0",
-    "rimraf": "^2.2.8",
     "simple-bufferstream": "0.0.4",
     "vinyl": "^0.4.6"
   },
