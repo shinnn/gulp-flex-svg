@@ -2,11 +2,11 @@
 
 [![Build Status](https://travis-ci.org/shinnn/gulp-flex-svg.svg?branch=master)](https://travis-ci.org/shinnn/gulp-flex-svg)
 [![Build status](https://ci.appveyor.com/api/projects/status/7t6wot5vv49423h5?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/gulp-flex-svg)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/gulp-flex-svg.svg)](https://coveralls.io/r/shinnn/gulp-flex-svg)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/gulp-flex-svg.svg?style=flat)](https://coveralls.io/r/shinnn/gulp-flex-svg)
 [![Dependency Status](https://david-dm.org/shinnn/gulp-flex-svg.svg)](https://david-dm.org/shinnn/gulp-flex-svg)
 [![devDependency Status](https://david-dm.org/shinnn/gulp-flex-svg/dev-status.svg)](https://david-dm.org/shinnn/gulp-flex-svg#info=devDependencies)
 
-[flex-svg](https://github.com/shinnn/node-flex-svg) plugin for [gulp](https://github.com/gulpjs/gulp)
+[flex-svg](https://github.com/shinnn/node-flex-svg) plugin for [gulp](http://gulpjs.com/)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -24,9 +24,9 @@
 
 ## Installation
 
-[![NPM version](https://badge.fury.io/js/gulp-flex-svg.svg)](https://www.npmjs.org/package/gulp-flex-svg)
+[![NPM version](https://img.shields.io/npm/v/gulp-flex-svg.svg?style=flat)](https://www.npmjs.com/package/gulp-flex-svg)
 
-[Use npm.](https://www.npmjs.org/doc/cli/npm-install.html)
+[Use npm.](https://docs.npmjs.com/cli/install)
 
 ```sh
 npm install --save-dev gulp-flex-svg
@@ -38,8 +38,9 @@ npm install --save-dev gulp-flex-svg
 var flexSvg = require('gulp-flex-svg');
 ```
 
-### flexSvg()
+### flexSvg([*options*])
 
+*options*: `Object` (directly passed to the [xml2js.Parser](https://github.com/Leonidas-from-XIV/node-xml2js#options) options and the [xml2js.Builder](https://github.com/Leonidas-from-XIV/node-xml2js#options-for-the-builder-class) options)  
 Return: `Object` ([stream.Transform](http://nodejs.org/docs/latest/api/stream.html#stream_class_stream_transform))
 
 ```javascript
