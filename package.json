@@ -49,6 +49,7 @@
   },
   "jscsConfig": {
     "preset": "google",
+    "requireBlocksOnNewline": true,
     "maximumLineLength": 98,
     "validateLineBreaks": "LF"
   }
