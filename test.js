@@ -2,9 +2,8 @@
 
 var assert = require('assert');
 
-var File = require('vinyl');
 var bufferStream = require('simple-bufferstream');
-
+var File = require('vinyl');
 var gulpFlexSvg = require('./');
 
 var fixture = [
@@ -23,11 +22,24 @@ var expected = [
 
 describe('gulp-flex-svg', function() {
   describe('in buffer mode', function() {
-    it('should remove width and height attributes', function(done) {
+    it('should remove width and height attributes.', function(done) {
       gulpFlexSvg()
-      .once('data', function(file) {
+      .on('data', function(file) {
         assert(file.isBuffer());
-        assert.equal(file.contents.toString('utf8'), expected);
+        assert.equal(file.contents.toString(), expected);
+        done();
+      })
+      .end(new File({contents: new Buffer(fixture)}));
+    });
+
+    it('should support parser options and builder options.', function(done) {
+      gulpFlexSvg({
+        ignoreAttrs: true,
+        headless: true
+      })
+      .on('data', function(file) {
+        assert(file.isBuffer());
+        assert.equal(file.contents.toString(), '<svg>\n  <rect></rect>\n</svg>');
         done();
       })
       .end(new File({contents: new Buffer(fixture)}));
@@ -35,7 +47,7 @@ describe('gulp-flex-svg', function() {
 
     it('should not modify an empty file.', function(done) {
       gulpFlexSvg()
-      .once('data', function(file) {
+      .on('data', function(file) {
         assert(file.isNull());
         done();
       })
@@ -62,14 +74,26 @@ describe('gulp-flex-svg', function() {
   });
 
   describe('in stream mode', function() {
-    it('should pass an plugin error', function(done) {
+    it('should remove width and height attributes.', function(done) {
+      gulpFlexSvg()
+      .on('data', function(file) {
+        assert(file.isStream());
+        file.contents.on('data', function(data) {
+          assert(data.toString(), expected);
+          done();
+        });
+      })
+      .end(new File({contents: bufferStream(fixture)}));
+    });
+
+    it('should emit an error when it fails to parse SVG.', function(done) {
       gulpFlexSvg()
       .on('error', function(err) {
         assert.equal(err.plugin, 'gulp-flex-svg');
-        assert.equal(err.message, 'Streaming not supported');
+        assert.equal(err.message, 'Unencoded <\nLine: 0\nColumn: 2\nChar: <');
         done();
       })
-      .end(new File({contents: bufferStream(fixture)}));
+      .end(new File({contents: bufferStream('<</svg>')}));
     });
   });
 });
