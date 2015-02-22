@@ -26,7 +26,7 @@ describe('gulp-flex-svg', function() {
       gulpFlexSvg()
       .on('data', function(file) {
         assert(file.isBuffer());
-        assert.equal(file.contents.toString(), expected);
+        assert.equal(String(file.contents), expected);
         done();
       })
       .end(new File({contents: new Buffer(fixture)}));
@@ -39,7 +39,7 @@ describe('gulp-flex-svg', function() {
       })
       .on('data', function(file) {
         assert(file.isBuffer());
-        assert.equal(file.contents.toString(), '<svg>\n  <rect></rect>\n</svg>');
+        assert.equal(String(file.contents), '<svg>\n  <rect/>\n</svg>');
         done();
       })
       .end(new File({contents: new Buffer(fixture)}));
@@ -79,7 +79,7 @@ describe('gulp-flex-svg', function() {
       .on('data', function(file) {
         assert(file.isStream());
         file.contents.on('data', function(data) {
-          assert(data.toString(), expected);
+          assert.equal(String(data), expected);
           done();
         });
       })
