@@ -1,10 +1,11 @@
 # gulp-flex-svg
 
+[![NPM version](https://img.shields.io/npm/v/gulp-flex-svg.svg)](https://www.npmjs.com/package/gulp-flex-svg)
 [![Build Status](https://travis-ci.org/shinnn/gulp-flex-svg.svg?branch=master)](https://travis-ci.org/shinnn/gulp-flex-svg)
 [![Build status](https://ci.appveyor.com/api/projects/status/7t6wot5vv49423h5?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/gulp-flex-svg)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/gulp-flex-svg.svg?style=flat)](https://coveralls.io/r/shinnn/gulp-flex-svg)
-[![Dependency Status](https://david-dm.org/shinnn/gulp-flex-svg.svg)](https://david-dm.org/shinnn/gulp-flex-svg)
-[![devDependency Status](https://david-dm.org/shinnn/gulp-flex-svg/dev-status.svg)](https://david-dm.org/shinnn/gulp-flex-svg#info=devDependencies)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/gulp-flex-svg.svg)](https://coveralls.io/r/shinnn/gulp-flex-svg)
+[![Dependency Status](https://img.shields.io/david/shinnn/gulp-flex-svg.svg?label=deps)](https://david-dm.org/shinnn/gulp-flex-svg)
+[![devDependency Status](https://img.shields.io/david/dev/shinnn/gulp-flex-svg.svg?label=devDeps)](https://david-dm.org/shinnn/gulp-flex-svg#info=devDependencies)
 
 [flex-svg](https://github.com/shinnn/node-flex-svg) plugin for [gulp](http://gulpjs.com/)
 
@@ -23,8 +24,6 @@
 ```
 
 ## Installation
-
-[![NPM version](https://img.shields.io/npm/v/gulp-flex-svg.svg?style=flat)](https://www.npmjs.com/package/gulp-flex-svg)
 
 [Use npm.](https://docs.npmjs.com/cli/install)
 
@@ -56,6 +55,6 @@ gulp.task('default', function() {
 
 ## License
 
-Copyright (c) 2014 [Shinnosuke Watanabe](https://github.com/shinnn)
+Copyright (c) 2014 - 2015 [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Licensed under [the MIT License](./LICENSE).
