@@ -15,8 +15,7 @@
     "url": "https://github.com/shinnn"
   },
   "files": [
-    "index.js",
-    "LICENSE"
+    "index.js"
   ],
   "licenses": [
     {
@@ -33,16 +32,16 @@
     "height"
   ],
   "dependencies": {
-    "bufferstreams": "0.0.2",
-    "flex-svg": "^ 2.0.0",
-    "gulp-util": "^3.0.1",
-    "through2": "^0.6.3"
+    "flex-svg": "^ 2.1.1",
+    "gulp-util": "^3.0.3",
+    "through2": "^0.6.3",
+    "vinyl-bufferstream": "^1.0.1"
   },
   "devDependencies": {
-    "eslint": "^0.11.0",
-    "istanbul": "^0.3.5",
+    "eslint": "^0.15.0",
+    "istanbul": "^0.3.6",
     "istanbul-coveralls": "^1.0.1",
-    "jscs": "^1.9.0",
+    "jscs": "^1.11.3",
     "mocha": "^2.1.0",
     "simple-bufferstream": "0.0.4",
     "vinyl": "^0.4.6"
