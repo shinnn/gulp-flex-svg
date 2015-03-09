@@ -2,8 +2,12 @@ env:
   node: true
   mocha: true
 rules:
-  eqeqeq: 2
+  no-extra-parens: 2
   block-scoped-var: 2
+  no-else-return: 2
+  no-eq-null: 2
+  no-floating-decimal: 2
+  space-after-keywords: 2
   quotes:
     - 2
     - single
