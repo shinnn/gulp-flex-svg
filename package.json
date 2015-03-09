@@ -4,8 +4,8 @@
   "description": "flex-svg plugin for gulp",
   "scripts": {
     "pretest": "jscs *.js && eslint *.js",
-    "test": "_mocha test.js",
-    "test-dot": "_mocha test.js --reporter dot",
+    "test": "mocha test.js",
+    "test-dot": "mocha test.js --reporter dot",
     "coverage": "istanbul cover _mocha -- test.js",
     "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
   },
@@ -33,16 +33,16 @@
   ],
   "dependencies": {
     "flex-svg": "^ 2.1.1",
-    "gulp-util": "^3.0.3",
+    "gulp-util": "^3.0.4",
     "through2": "^0.6.3",
     "vinyl-bufferstream": "^1.0.1"
   },
   "devDependencies": {
-    "eslint": "^0.15.0",
-    "istanbul": "^0.3.6",
-    "istanbul-coveralls": "^1.0.1",
+    "eslint": "^0.16.1",
+    "istanbul": "^0.3.7",
+    "istanbul-coveralls": "^1.0.2",
     "jscs": "^1.11.3",
-    "mocha": "^2.1.0",
+    "mocha": "^2.2.0",
     "simple-bufferstream": "0.0.4",
     "vinyl": "^0.4.6"
   },
