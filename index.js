@@ -5,8 +5,7 @@
 'use strict';
 
 var FlexSvg = require('flex-svg').FlexSvg;
-var gutil = require('gulp-util');
-var PluginError = gutil.PluginError;
+var PluginError = require('gulp-util').PluginError;
 var through = require('through2');
 var VinylBufferStream = require('vinyl-bufferstream');
 
