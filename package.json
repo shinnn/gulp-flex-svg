@@ -3,7 +3,7 @@
   "version": "1.1.1",
   "description": "flex-svg plugin for gulp",
   "scripts": {
-    "pretest": "jscs *.js && eslint *.js",
+    "pretest": "eslint --config node_modules/@shinnn/eslintrc-node/rc.json --env mocha index.js test.js",
     "test": "mocha test.js",
     "test-dot": "mocha test.js --reporter dot",
     "coverage": "istanbul cover _mocha -- test.js",
@@ -38,18 +38,12 @@
     "vinyl-bufferstream": "^1.0.1"
   },
   "devDependencies": {
-    "eslint": "^0.19.0",
+    "@shinnn/eslintrc-node": "^1.0.2",
+    "eslint": "^0.20.0",
     "istanbul": "^0.3.13",
     "istanbul-coveralls": "^1.0.2",
-    "jscs": "^1.12.0",
     "mocha": "^2.2.4",
     "simple-bufferstream": "1.0.0",
     "vinyl": "^0.4.6"
-  },
-  "jscsConfig": {
-    "preset": "google",
-    "requireBlocksOnNewline": true,
-    "maximumLineLength": 98,
-    "validateLineBreaks": "LF"
   }
 }
