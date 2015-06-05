@@ -10,19 +10,11 @@
     "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
   },
   "repository": "shinnn/gulp-flex-svg",
-  "author": {
-    "name": "Shinnosuke Watanabe",
-    "url": "https://github.com/shinnn"
-  },
+  "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "files": [
     "index.js"
   ],
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/shinnn/gulp-flex-svg/blob/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "keywords": [
     "gulpplugin",
     "svg",
@@ -33,17 +25,17 @@
   ],
   "dependencies": {
     "flex-svg": "^ 2.1.1",
-    "gulp-util": "^3.0.4",
+    "gulp-util": "^3.0.5",
     "through2": "^0.6.5",
     "vinyl-bufferstream": "^1.0.1"
   },
   "devDependencies": {
     "@shinnn/eslintrc-node": "^1.0.2",
-    "eslint": "^0.20.0",
-    "istanbul": "^0.3.13",
-    "istanbul-coveralls": "^1.0.2",
-    "mocha": "^2.2.4",
+    "eslint": "^0.22.1",
+    "istanbul": "^0.3.14",
+    "istanbul-coveralls": "^1.0.3",
+    "mocha": "^2.2.5",
     "simple-bufferstream": "1.0.0",
-    "vinyl": "^0.4.6"
+    "vinyl": "^0.5.0"
   }
 }
