@@ -6,7 +6,7 @@
 
 var FlexSvg = require('flex-svg').FlexSvg;
 var PluginError = require('gulp-util').PluginError;
-var through = require('through2');
+var Transform = require('readable-stream/transform');
 var VinylBufferStream = require('vinyl-bufferstream');
 
 module.exports = function gulpFlexSvg(options) {
@@ -21,17 +21,20 @@ module.exports = function gulpFlexSvg(options) {
     });
   });
 
-  return through.obj(function(file, enc, cb) {
-    var self = this;
+  return new Transform({
+    objectMode: true,
+    transform: function(file, enc, cb) {
+      var self = this;
 
-    run(file, function(err, contents) {
-      if (err) {
-        self.emit('error', new PluginError('gulp-flex-svg', err, {fileName: file.path}));
-      } else {
-        file.contents = contents;
-        self.push(file);
-      }
-      cb();
-    });
+      run(file, function(err, contents) {
+        if (err) {
+          self.emit('error', new PluginError('gulp-flex-svg', err, {fileName: file.path}));
+        } else {
+          file.contents = contents;
+          self.push(file);
+        }
+        cb();
+      });
+    }
   });
 };
