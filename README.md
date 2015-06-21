@@ -27,26 +27,26 @@
 
 [Use npm.](https://docs.npmjs.com/cli/install)
 
-```sh
+```
 npm install --save-dev gulp-flex-svg
 ```
 
 ## API
 
 ```javascript
-var flexSvg = require('gulp-flex-svg');
+const flexSvg = require('gulp-flex-svg');
 ```
 
 ### flexSvg([*options*])
 
 *options*: `Object` (directly passed to the [xml2js.Parser](https://github.com/Leonidas-from-XIV/node-xml2js#options) options and the [xml2js.Builder](https://github.com/Leonidas-from-XIV/node-xml2js#options-for-the-builder-class) options)  
-Return: `Object` ([stream.Transform](http://nodejs.org/docs/latest/api/stream.html#stream_class_stream_transform))
+Return: `Object` ([stream.Transform](https://nodejs.org/docs/latest/api/stream.html#stream_class_stream_transform))
 
 ```javascript
-var gulp = require('gulp');
-var flexSvg = require('flex-svg');
+const gulp = require('gulp');
+const flexSvg = require('flex-svg');
 
-gulp.task('default', function() {
+gulp.task('default', () => {
   return gulp.src('src/**/*.svg')
     .pipe(flexSvg())
     .pipe(gulp.dest('dist'));
